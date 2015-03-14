@@ -1,0 +1,24 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/office.rpy", line 39, in script call
+  File "game/networking.rpy", line 16, in script
+  File "game/networking.rpy", line 16, in python
+NameError: name 'meetupontime' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "/Users/nellwatson/Desktop/Founder Life/renpy-6.16.5-sdk 2/renpy/execution.py", line 294, in run
+    node.execute()
+  File "/Users/nellwatson/Desktop/Founder Life/renpy-6.16.5-sdk 2/renpy/ast.py", line 1547, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/nellwatson/Desktop/Founder Life/renpy-6.16.5-sdk 2/renpy/python.py", line 1416, in py_eval
+    return eval(py_compile(source, 'eval'), globals, locals)
+  File "game/networking.rpy", line 16, in <module>
+    if meetupontime:
+NameError: name 'meetupontime' is not defined
+
+Darwin-13.1.0-x86_64-i386-64bit
+Ren'Py 6.17.4.409
+Nell Watson's Founder Life 0.4
