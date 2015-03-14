@@ -1,0 +1,424 @@
+##############################################################################
+# Schedule
+#
+# Screen that's used to set a schedule for the month. 
+
+screen schedule:
+
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Monthly Schedule"
+
+        grid 4 5:
+            transpose True
+           
+            label "First Week"
+            textbutton "School" action ShowMenu ("school_1")
+            textbutton "Work" action ShowMenu ("work_1")
+            textbutton "Travel" action ShowMenu ("travel_1")
+            textbutton "Rest" action ShowMenu ("rest_1")
+           
+            label "Second Week"
+            textbutton "School" action ShowMenu ("school_2")
+            textbutton "Work" action ShowMenu ("work_2")
+            textbutton "Travel" action ShowMenu ("travel_2")
+            textbutton "Rest" action ShowMenu ("rest_2")
+           
+            label "Third Week"
+            textbutton "School" action ShowMenu ("school_3")
+            textbutton "Work" action ShowMenu ("work_3")
+            textbutton "Travel" action ShowMenu ("travel_3")
+            textbutton "Rest" action ShowMenu ("rest_3")
+           
+            label "Fourth Week"
+            textbutton "School" action ShowMenu ("school_4")
+            textbutton "Work" action ShowMenu ("work_4")
+            textbutton "Travel" action ShowMenu ("travel_4")
+            textbutton "Rest" action ShowMenu ("rest_4")
+
+        textbutton "Done" action Return() xalign .5
+
+init python:
+    #This controls minimum button length
+    style.schedule_button.xminimum = 180
+    style.schedule_label.xalign = .5
+
+#WEEK 01
+
+screen school_1:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "What Would You Like To Study?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Art" action SetVariable("week01", "Art")
+            textbutton "Fencing" action SetVariable("week01", "Fencing")
+            textbutton "Math" action SetVariable("week01", "Math")
+            textbutton "Alchemy" action SetVariable("week01", "Alchemy")
+
+        textbutton "Select" action Return() xalign .5
+        
+    
+screen work_1:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Work?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Church" action SetVariable("week01", "Church")
+            textbutton "Farm" action SetVariable("week01", "Farm")
+            textbutton "Store" action SetVariable("week01", "Store")
+            textbutton "Chores" action SetVariable("week01", "Chores")
+
+        textbutton "Select" action Return() xalign .5
+        
+
+screen travel_1:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Go?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "North" action SetVariable("week01", "North")
+            textbutton "East" action SetVariable("week01", "East")
+            textbutton "South" action SetVariable("week01", "South")
+            textbutton "West" action SetVariable("week01", "West")
+
+        textbutton "Select" action Return() xalign .5
+
+
+screen rest_1:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Rest?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Home" action SetVariable("week01", "Home")
+            textbutton "Library" action SetVariable("week01", "Library")
+            textbutton "Vacation" action SetVariable("week01", "Vacation")
+            textbutton "Hospital" action SetVariable("week01", "Hospital")
+
+        textbutton "Select" action Return() xalign .5
+
+
+#WEEK 02
+
+screen school_2:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "What Would You Like To Study?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Art" action SetVariable("week02", "Art")
+            textbutton "Fencing" action SetVariable("week02", "Fencing")
+            textbutton "Math" action SetVariable("week02", "Math")
+            textbutton "Alchemy" action SetVariable("week02", "Alchemy")
+
+        textbutton "Select" action Return() xalign .5
+        
+    
+screen work_2:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Work?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Church" action SetVariable("week02", "Church")
+            textbutton "Farm" action SetVariable("week02", "Farm")
+            textbutton "Store" action SetVariable("week02", "Store")
+            textbutton "Chores" action SetVariable("week02", "Chores")
+
+        textbutton "Select" action Return() xalign .5
+
+
+screen travel_2:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Go?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "North" action SetVariable("week02", "North")
+            textbutton "East" action SetVariable("week02", "East")
+            textbutton "South" action SetVariable("week02", "South")
+            textbutton "West" action SetVariable("week02", "West")
+
+        textbutton "Select" action Return() xalign .5
+
+
+screen rest_2:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Rest?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Home" action SetVariable("week02", "Home")
+            textbutton "Library" action SetVariable("week02", "Library")
+            textbutton "Vacation" action SetVariable("week02", "Vacation")
+            textbutton "Hospital" action SetVariable("week02", "Hospital")
+
+        textbutton "Select" action Return() xalign .5
+    
+    
+#WEEK 03
+
+screen school_3:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "What Would You Like To Study?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Art" action SetVariable("week03", "Art")
+            textbutton "Fencing" action SetVariable("week03", "Fencing")
+            textbutton "Math" action SetVariable("week03", "Math")
+            textbutton "Alchemy" action SetVariable("week03", "Alchemy")
+
+        textbutton "Select" action Return() xalign .5
+    
+screen work_3:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Work?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Church" action SetVariable("week03", "Church")
+            textbutton "Farm" action SetVariable("week03", "Farm")
+            textbutton "Store" action SetVariable("week03", "Store")
+            textbutton "Chores" action SetVariable("week03", "Chores")
+
+        textbutton "Select" action Return() xalign .5
+
+
+screen travel_3:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Go?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "North" action SetVariable("week03", "North")
+            textbutton "East" action SetVariable("week03", "East")
+            textbutton "South" action SetVariable("week03", "South")
+            textbutton "West" action SetVariable("week03", "West")
+
+        textbutton "Select" action Return() xalign .5
+
+
+screen rest_3:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Rest?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Home" action SetVariable("week03", "Home")
+            textbutton "Library" action SetVariable("week03", "Library")
+            textbutton "Vacation" action SetVariable("week03", "Vacation")
+            textbutton "Hospital" action SetVariable("week03", "Hospital")
+
+        textbutton "Select" action Return() xalign .5
+
+
+#WEEK 04
+
+screen school_4:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "What Would You Like To Study?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Art" action SetVariable("week04", "Art")
+            textbutton "Fencing" action SetVariable("week04", "Fencing")
+            textbutton "Math" action SetVariable("week04", "Math")
+            textbutton "Alchemy" action SetVariable("week04", "Alchemy")
+
+        textbutton "Select" action Return() xalign .5
+
+    
+screen work_4:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Work?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Church" action SetVariable("week04", "Church")
+            textbutton "Farm" action SetVariable("week04", "Farm")
+            textbutton "Store" action SetVariable("week04", "Store")
+            textbutton "Chores" action SetVariable("week04", "Chores")
+
+        textbutton "Select" action Return() xalign .5
+
+
+screen travel_4:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Go?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "North" action SetVariable("week04", "North")
+            textbutton "East" action SetVariable("week04", "East")
+            textbutton "South" action SetVariable("week04", "South")
+            textbutton "West" action SetVariable("week04", "West")
+
+        textbutton "Select" action Return() xalign .5
+
+
+screen rest_4:
+    
+    frame:
+        style_group "schedule"       
+        xalign .5
+        yalign .33
+       
+        #This controls vertical spacing
+        has vbox spacing 20
+
+        label "Where Would You Like To Rest?"
+
+        grid 1 4:
+            transpose True
+           
+            textbutton "Home" action SetVariable("week04", "Home")
+            textbutton "Library" action SetVariable("week04", "Library")
+            textbutton "Vacation" action SetVariable("week04", "Vacation")
+            textbutton "Hospital" action SetVariable("week04", "Hospital")
+
+        textbutton "Select" action Return() xalign .5

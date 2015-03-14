@@ -1,0 +1,43 @@
+label createfounder:  
+    n "All Founders have a self-made quality about them."
+    n "Let's look at the factors that make you unique."
+    
+    
+    n "So, are you male, or female?"
+    menu: 
+        f "Female."
+        Flag female
+        f "Male."
+        Flag male
+        f "Other."
+        Flag other
+        if Other
+        n "Interesting. I'm going to assume that you're mostly organic.\n"
+        
+    menu: Did you grow up primarily as one gender?
+
+    n "How many of earth's rotations have you experience to date?"
+    menu: 
+        f "\<18"
+        f "19-24"
+        f "25-29"
+        f "30-35"
+        f "35-45"
+        f "45-60"
+        f "\<61"
+        
+    
+    
+    n "Tell me about your childhood"
+    menu:
+        f "All things considered, I had a great childhood."
+        Flag childhood good
+        f "Kind average, I guess."
+        Flag childhood neutral
+        f "Ha! It was pretty tragic."
+        Flag childhood bad
+        
+    
+    
+    
+return

@@ -1,0 +1,63 @@
+##############################################################################
+# Home Screen
+#
+# A kind of dashboard allowing the player to look at their stats.
+
+screen home:
+    tag menu
+    
+    frame:
+        style_group "home"
+        xalign 1.0
+        yalign 0.8
+        
+        grid 4 2:
+            transpose False
+            textbutton "Stats" action Show("codex1")
+            textbutton "Talk" action Show("codex2")
+            textbutton "Diet" action Show("codex3")
+            textbutton "Info" action Show("codex4")
+            
+            textbutton "Town" action Show("codex1")
+            textbutton "Castle" action Show("codex2")
+            textbutton "Items" action Show("codex3")
+            textbutton "Save" action ShowMenu("save")
+    
+    frame:
+        style_group "home2"
+        xalign 1.0
+        yalign 1.0
+        vbox: 
+            textbutton "Schedule" action Jump("month")
+            
+init python:
+    #This controls minimum button length
+    style.home = Style(style.frame)
+    style.home_button.xmaximum = 100
+    style.home_button.xminimum = 100
+    style.home_button.yminimum = 100
+    style.home_button.ymaximum = 100
+    
+init python:
+    #This controls minimum button length
+    style.home2 = Style(style.frame)
+    style.home2_button.xmaximum = 400
+    style.home2_button.xminimum = 400
+    style.home2_button.yminimum = 100
+    style.home2_button.ymaximum = 100
+    
+#STATS
+
+#TALK
+
+#DIET
+
+#INFO
+
+#TOWN
+
+#CASTLE
+
+#ITEMS
+
+#SAVE
